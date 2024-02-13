@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -90,7 +90,7 @@
 // }
 // var a=[9,6,5,2,8,5,0,4,0,7]
 // console.log(phone());
-// 11.Create a function that returns an array of strings sorted by length in ascending order.
+//  11.Create a function that returns an array of strings sorted by length in ascending order.
 // Example:
 // sortByLength(["a", "ccc", "dddd", "bb"]) ➞ ["a", "bb", "ccc", "dddd"]
 // function length(a){
@@ -118,28 +118,453 @@
 // for(i=0;i<=a.length;i+=2){
 //     console.log(a[i]);
 // }
-// d.To find odd intex characters
+// d.To find odd index characters
 // var a="bonagiri";
 // for(i=1;i<=a.length;i+=2){
 //     console.log(a[i]);
     
 // }
-// e.each letter of the first letter should be capitalized..
-// var a="mounika "
-// var b="pandu"
+
+//  e.each letter of the first letter should be capitalized.
+//   var a="pandu mounika goodgirl"
 // a=a.charAt(0).toUpperCase()+a.slice(1);
-// b=b.charAt(0).toUpperCase()+b.slice(1);
-// console.log(a);
-// console.log(b);
-// f.first and last letter shd be capitalized
-// var a="mounikabonagiri"
+//  console.log("each first letter of the word should be capitalized---"+a.replace(/m/ig,"M").replace(/g/gi,"G"));
+
+// // // f.first and last letter shd be capitalized
+// var a="mounika bonagiri"
 // a=a.charAt(0).toUpperCase()+a.slice(1);
 // a=a.slice(0,-1)+a.slice(-1).toUpperCase();
-// console.log(a);
-// g.a return in string and count how many vowels and consonants
-// var a="hello";
+// console.log("first and last letter should be capitalized--"+a);
 
-// console.log("'"+a+"'")
+// g.a return in string and count how many vowels and consonants
+// var a="pandumounika";
+// var vowelsCount=0
+// var consonantsCount=0
+// var vowels=""
+// var consonants=""
+// for(i=0;i<a.length;i++){
+//     if(a[i]==="a"||a[i]==="e"||a[i]==="i"||a[i]==="o"||a[i]==="u"){
+//         vowelsCount++;
+//         vowels+=a[i];
+//     } else if(a[i]!==""){
+//         consonantsCount++;
+//        consonants +=a[i];
+// }
+// }
+// console.log("Vowels:", vowels, "(Count:", vowelsCount + ")");
+// console.log("Consonants:", consonants, "(Count:", consonantsCount + ")");
+
+// h.take name and the space between name should not there.
+// var a="pandu mounika";
+// console.log(a.replace(/ /gi,""));
+// var a="pandu mounika";
+// var temp="pandumounika"
+//  temp=temp.replace(/ /gi,"")
+// console.log(temp);
+
+// var a = "moun ika";
+// var result = "";
+
+// for (var i = 0; i < a.length; i++) {
+//     if (a[i] !== " ") { 
+//         result += a[i]; 
+//     }
+// }
+
+// console.log("Removing space between words-- "+result); 
+// // var a="pandu_mounika_goodgirl"
+//  var result
+//  a=a.charAt(0).toUpperCase()+a.slice(1);
+// console.log(a.replace(/m/gi,"M").replace(/g/gi,"G").replace(/_/gi,""));
+
+// i.with slicing  using forloop 
+// var a="pandumounika"
+// var b=""
+// function spc(m,n){
+//     for(i=m;i<n;i++){
+//         b+=a[i]
+//     }
+//     console.log("using forloop finding finding letters which we require ---"  +b)
+// }
+// spc(2,8)
+//  j. Take i/p: var a=[1,2,3,[1,2],3,4]; and op should be o/p:1,2,3,1,2,3,4;
+// debugger
+// var array=[1,2,3,[1,2],3,4]
+// for(var i=0;i<array.length;i++){
+// if(Array.isArray(array[i])){
+//     for(var j=0;j<array[i].length;j++){
+//         console.log(array[i][j]);
+//     }
+//      }   else{
+//             console.log(array[i])
+// }
+// }
+// k.using prompt add multiple values into an array
+// l.3.i/p=[3,4,1,2,4,2]
+// print second largest num from an array
+
+// sort:[1,2,2,3,4,4]
+// remove duplicates:[1,2,3,4]
+// o/p:3
+
+
+// var a=[3,4,1,2,4,2]
+// var sort=[ ]
+// for(i=0;i<a.length;i++){
+//     sort[i]=a[i]
+// }
+// for(i=0;i<sort.length;i++){
+//     for(j=i+1;j<sort.length;j++){
+//          if (sort[i] > sort[j]) {
+//             var temp = sort[i];
+//             sort[i] = sort[j];
+//             sort[j] = temp;
+//         }
+//     }
+// }
+
+// console.log("Sorted array:", sort);
+// console.log("The second largest number is " +sort[sort.length - 3])
+// k.using prompt add multiple values into an array
+// var a=[1,2,3,4,5,6,8,9,9]
+// var a=[]
+// var n=prompt("enter number")
+// a[0]=n;
+// document.write(a);
+
+// var a=[];
+// var Values=prompt("How many values do you want to add?");
+// for(var i=0;i<Values;i++){
+// var value=prompt("enter  number " + (i+1));
+// a[i]=value;
+// }
+// console.log("Array:",a);
+
+
+// l.Finding maximum and minimum number from given array
+// function max(){
+//     let array=[1,2,334,5,5,6];
+//     max=array[0];
+//     for(i=0;i<array.length;i++){
+//         if(array[i]>max){
+//             max=array[i];
+//         }
+//     }console.log(`the largest number is ${max}`)
+// }
+// max()
+// function min(){
+//     let array=[1,2,334,5,5,6];
+//     min=array[0];
+//     for(i=0;i<array.length;i++){
+//         if(array[i]<min){
+//             min=array[i];
+//         }
+//     }console.log(`the smallest number is ${min}`)
+// }
+// min()
+
+
+// Write a program to print the second smallest digit in the given number.
+
+// Input : 4613
+// Output: 3
+// Explanation: In the given number, 3 is the second smallest digit.
+ 
+
+// smallest number
+// function small(){
+//     var a=4613;
+//     var comp=a.toString()[0];
+//     for(var i=0;i<a.toString().length;i++){
+//         if(a.toString()[i]<comp){
+//              comp = a.toString()[i];
+//         }
+//     }console.log("the smallest number is " +comp)
+// }
+// small();
+
+
+
+// function smaller() {
+//     var a = 4613;
+//     var s = Infinity;
+//     var t = Infinity;
+
+//     for (var i = 0; i < a.toString().length; i++) {
+//         var c = (a.toString()[i]);
+//         if (c < s) {
+//             t = s;
+//             s = c;
+//         } else if (c < t && c !== s) {
+//             t = c;
+//         }
+//     }
+
+//     console.log("the second smallest number is " + t);
+// }
+
+// smaller();
+
+// Write a program to print the sum of smallest and largest digit in the given number.
+
+// Input: 5812
+// Output: 9 
+// Explanation: In the given number smallest digit is 1 and largest digit is 8. There sum is 9
+
+// function small(){
+//     var a=5812;
+//     var comp=a.toString()[0];
+//     for(var i=0;i<a.toString().length;i++){
+//         if(a.toString()[i]<comp){
+//              comp = a.toString()[i];
+//         }
+//     }console.log("the smallest number is " +comp)
+// }
+// small();
+// function big(){
+//     var a=5812;
+//     var comp=a.toString()[0];
+//     for(var i=0;i<a.toString().length;i++){
+//         if(a.toString()[i]>comp){
+//              comp = a.toString()[i];
+//         }
+//     }console.log("the biggest number is " +comp)
+// }
+// big();
+// function sum(){
+//     var a=5812;
+//     var small= 19;
+//     var big=0;
+//     for(var i=0;i<a.toString().length;i++){
+//           var comp=(a.toString()[i]) - '0';;
+//         if(comp < small){
+//             small=comp
+//         }
+//         if(comp > big){
+//             big=comp
+//         }
+//     }
+//     var sum= small+big ;
+//     console.log("the sum is " +sum)
+// }
+// sum()
+
+// 1) Write a program to print how many numbers, aplhabets and special symbols are presented in the given string:
+
+// Test Case 1:
+// input: 10KCoder$
+// output: Numbers: 2
+// 	Alphabets: 6
+// 	Special Characters: 1
+
+// input: Wrold@12&3
+// output: Numbers: 3
+// 	Alphabets: 5
+// 	Special Characters: 2
+
+// var a="10KCoder$";
+// var alphabetCount=0
+// var numberCount=0
+// var characterCount=0
+// function countcharacters(str){
+//     for(var i=0;i<str.length;i++){
+//         var charCode=str.charCodeAt(i);
+//         if((charCode>=65&&charCode<=90)||(charCode>=97&&charCode<=122)){
+//            alphabetCount++
+//         }else if(charCode>=48&&charCode<=57){
+//            numberCount++
+//         }else{
+//             characterCount++
+//         }
+//     }
+// }
+// countcharacters(a);
+// console.log("the alphabet count is:" +alphabetCount)
+// console.log("the number count is:" +numberCount)
+// console.log("the character count is:" +characterCount)
+
+// var a = "10KCoder$";
+// var alphabetCount = 0;
+// var numberCount = 0;
+// var characterCount = 0;
+
+// var a="10kcoders"
+// var row1=""
+// var row2=""
+// for(var i=0;i<a.length;i++){
+//     if(i%2===0){
+//         row1+=" "+a[i]
+//     }
+//     else{
+//        row2+=" "+a[i] 
+//     }
+// }
+// console.log(row1);
+// console.log(row2);
+
+// var a="10kcoders"
+// var row1=""
+// var row2=""
+// var row3=""
+// for(var i=0;i<a.length;i++){
+//     if(i%3===0){
+//         row1+=" "+a[i]
+//     }
+//     else if(i%3===1){
+//        row2+=" "+a[i] 
+//     }
+//     else{
+//         row3+=" "+a[i]
+//     }
+// }
+
+// console.log(row1);
+// console.log(row2);
+// console.log(row3);
+
+
+// var a=["hello","mounika","bonagiri"] need vowels,vowelcount and there sum
+// var a=["hello","mounika","bonagiri"]
+// var vowelcount=0
+// var vowels=""
+// var vowelsum=0
+// for(var j=0;j<a.length;j++){
+// var vowels=""
+// var vowelcount=0
+// for(var i=0;i<a[j].length;i++){
+//     if(a[j][i]==="a"||a[j][i]==="e"||a[j][i]==="i"||a[j][i]==="o"||
+//     a[j][i]==="u"){
+//         vowelcount++
+//         vowels+=a[j][i]
+//         vowelsum++
+//     }
+// }
+//  console.log("Vowels in", a[j] + ":", vowels, "(Count:", vowelcount + ")");
+// }
+// console.log("sum of all the string is ", vowelsum);
+
+// var aa = [["chota", "bheem"], ["mickey", "mouse"]];
+// --- in this each should be 
+// enclosed in square brackets with quotes
+
+// for (var j = 0; j < aa.length; j++) {
+//     var vowelsArray = []; // Initialize an array to store vowels for each inner array
+
+//     for (var i = 0; i < aa[j].length; i++) {
+//         var vowels = ""; // Initialize vowels for each word
+
+//         for (var k = 0; k < aa[j][i].length; k++) {
+//             if (aa[j][i][k] === "a" || aa[j][i][k] === "e" || aa[j][i][k] === "i" || aa[j][i][k] === "o" || aa[j][i][k] === "u") {
+//                 vowels += aa[j][i][k];
+//             }
+//         }
+//         if (vowels !== "") { // Only add vowels if there are any
+//             vowelsArray.push("'" + vowels + "'");
+//         }
+//     }
+
+//     var groupedVowels = "[" + vowelsArray.join(",") + "]";
+//     console.log(groupedVowels);
+//   }
+
+
+  // or
+
+//   var aa=[["chota","bheem"],["mickey","mouse"]];
+// var vowels="";
+// for(var j=0;j<aa.length;j++){
+// var vowels="";
+// for(var i=0;i<aa[j].length;i++){
+//     for(var k=0;k<aa[j][i].length;k++){
+//     if(aa[j][i][k]==="a"||aa[j][i][k]==="e"||aa[j][i][k]==="i"||
+//     aa[j][i][k]==="o"||aa[j][i][k]==="u"){
+//         vowels+= aa[j][i][k];
+//     }
+// }
+// }
+// console.log("Vowels in", aa[j] + ":", vowels);
+
+// }
+// Finding subsets of [1,2,3,4,5]
+// var input=[1,2,3,4,5]
+// for(var i=0;i<input.length;i++){
+//     for(var j=0;j<input.length;j++){
+//        console.log(`(${input[i]}, ${input[j]})`);
+
+//     }
+// }
+
+
+// tables prblm
+
+// var input=(prompt("enter a number:"))
+// console.log("multiplication table for" + input + ":")
+// for(var i=1;i<=10;i++){
+//  console.log(`${input} * ${i} = ${input * i}`);
+// }
+
+// var input = (prompt("Enter a number:"));
+
+// for (var num = 1; num <= input; num++) {
+//     console.log("Multiplication table for " + num + ":");
+
+//     for (var i = 1; i <= 10; i++) {
+//         console.log(`${num} * ${i} = ${num * i}`);
+//     }
+//     console.log();
+// }
+
+//OBJECTS
+
+// var obj =[
+//     {
+//         name:"hello",
+//         age:20
+//     },
+//     {
+//         name:"kiran",
+//         age:18
+//     },
+//     {
+//         name:"raju",
+//         age:21
+//     }
+
+// ];
+// for(var i=0;i<obj.length;i++)
+// if(obj[i].age>18){
+//     console.log(`${obj[i].name} : you are eligible to vote` )
+// }else{
+//     console.log(`${obj[i].name} : you are not eligible to vote `)
+// }
+// var a=[
+//     {
+//         "id":1,"title":"Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops","price":109.95,
+//         "description":"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+//         "category":"men's clothing",
+//         "image":"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg","rating":{"rate":3.9,
+//         "count":120
+//         }},
+//         {"id":2,"title":"Mens Casual Premium Slim Fit T-Shirts ","price":22.3,"description":"Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.","category":"men's clothing","image":"https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg","rating":{"rate":4.1,"count":259}},
+//         {"id":3,"title":"Mens Cotton Jacket","price":55.99,"description":"great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.","category":"men's clothing","image":"https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg","rating":{"rate":4.7,"count":500}},
+//         ]
+//      for(i=0;i<a.length;i++){
+//          if(a[i].price>50){
+//              console.log("Price is greater than 50",a[i])
+//          }
+//      }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -159,4 +584,4 @@
 
     </script>
   </body>
-</html>
+</html> 
