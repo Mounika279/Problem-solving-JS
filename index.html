@@ -556,6 +556,45 @@
 
 
 
+// Create a function that returns an array of strings sorted by length in ascending order.
+// Example:
+// sortByLength(["a", "ccc", "dddd", "bb"]) ➞ ["a", "bb", "ccc", "dddd"]
+
+
+var a=["a", "ccc", "dddd", "bb"]
+var sort=[]
+for(i=0;i<a.length;i++){
+    sort[i]=a[i];
+}
+for(i=0;i<sort.length;i++){
+    for(j=i+1;j<sort.length;j++){
+        if(sort[i]>sort[j]){
+            temp=sort[i];
+            sort[i]=sort[j];
+            sort[j]=temp;
+        }
+    }
+}
+console.log("ordered alphabets are:",sort);
+
+// write a program take a function as input find nonrepeated digits and find sum
+var a=773513743;
+var notrepeated="";
+var sum=0;
+ function num(){
+     var numstring=a.toString()
+     for(var i=0;i<numstring.length;i++){
+     var currentdigit=numstring[i]
+     if(numstring.indexOf(currentdigit)===numstring.lastIndexOf(currentdigit)){
+         notrepeated+=currentdigit
+         sum+=parseInt(currentdigit)
+     }
+ }
+ console.log("non repeated digits are",notrepeated);
+ console.log("sum of non-repeated digits is:",sum);
+ }
+ num()
+
 
 
 
